@@ -1,6 +1,6 @@
 ---
 title: Introduction
-permalink: introduction
+permalink: js/introduction
 layout: js
 categories: js
 active: js

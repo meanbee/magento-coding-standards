@@ -1,6 +1,6 @@
 ---
 title: Theme Development
-permalink: theme-development
+permalink: js/theme-development
 layout: js
 categories: js
 active: js

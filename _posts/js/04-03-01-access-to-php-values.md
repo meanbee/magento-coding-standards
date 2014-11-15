@@ -1,6 +1,6 @@
 ---
 title: Access to PHP values
-permalink: access-to-php-values
+permalink: js/access-to-php-values
 isChild: true
 layout: js
 categories: js

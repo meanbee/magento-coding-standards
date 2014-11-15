@@ -1,6 +1,6 @@
 ---
 title: Unit Testing
-permalink: unit-testing
+permalink: js/unit-testing
 isChild: true
 layout: js
 categories: js

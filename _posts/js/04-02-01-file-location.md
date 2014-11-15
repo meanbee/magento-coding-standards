@@ -1,6 +1,6 @@
 ---
 title: File Location
-permalink: file-location
+permalink: js/file-location
 isChild: true
 layout: js
 categories: js

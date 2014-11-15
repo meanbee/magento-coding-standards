@@ -1,6 +1,6 @@
 ---
 title: Module Development
-permalink: module-development
+permalink: js/module-development
 layout: js
 categories: js
 active: js

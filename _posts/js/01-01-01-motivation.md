@@ -1,6 +1,6 @@
 ---
 title: Motivation
-permalink: motivation
+permalink: js/motivation
 layout: js
 categories: js
 active: js

@@ -1,6 +1,6 @@
 ---
 title: Using OOP
-permalink: using-oop
+permalink: js/using-oop
 isChild: true
 layout: js
 categories: js
