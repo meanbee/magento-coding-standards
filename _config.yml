@@ -6,10 +6,10 @@ baseurl: ""
 url: "http://standards.meanbee.com"
 
 # Build settings
-markdown: kramdown
-
-sass:
-    style: :compressed
-
+exclude:
+  - 'vendor'
 gems:
   - jekyll-sitemap
+markdown: kramdown
+sass:
+    style: :compressed
