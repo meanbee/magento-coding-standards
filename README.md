@@ -1,4 +1,4 @@
-magento-js-standards
+magento-coding-standards
 ====================
 
-Meanbee's JS standards for Magento 
+Meanbee's coding standards for Magento 
