@@ -10,3 +10,6 @@ markdown: kramdown
 
 sass:
     style: :compressed
+
+gems:
+  - jekyll-sitemap
