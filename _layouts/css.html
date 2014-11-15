@@ -11,14 +11,40 @@
         </div>
     </header>
 
+    <div class="page-header">
+        <h1>Coding Standards for Magento</h1>
+        <div class="buttons-group">
+            <a href="/php.html" class="button-element button-outline">PHP</a>
+            <a href="/js.html" class="button-element button-outline">JS</a>
+            <a href="/css.html" class="button-element button-outline active">CSS</a>
+        </div>
+    </div>
+
     <section class="blog">
+        
         {% include css-articles.html %}
+
         <article class="blog-article">
-            <header>
-                <h1 class="blog-article-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
-            </header>
-            {{ content }}
-        </article>
+          {% for post in site.categories.css reversed %}
+            <section class="blog-article-section">
+              {% if post.isChild %}
+                <h2 class="blog-article-subtitle" id="{{ post.permalink }}">{{ post.title }}</h2>
+              {% else %}
+                <h1 class="blog-article-title" id="{{ post.permalink }}">{{ post.title }}</h1>
+              {% endif %}
+
+              {{ post.content }}
+
+              {% if post.isChild %}
+              <p>
+                <a href="#">Back to top</a>
+              </p>
+              {% endif %}
+            </section>
+          {% endfor %}
+        </article>    
+
+
     </section>
 
     {% include footer.html %}
