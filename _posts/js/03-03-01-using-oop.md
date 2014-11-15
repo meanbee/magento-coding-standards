@@ -1,0 +1,70 @@
+---
+title: Using OOP
+permalink: using-oop
+isChild: true
+layout: js
+categories: js
+active: js
+---
+
+Programmers have been controlling complexity in programming with OOP since the 1960s, JavaScript is not an exception! This is likely because objects and classes in JavaScript are non-standard compared to other languages. Luckily, for Magento developers, Prototype offers this functionality in a more familiar way. An example, taken from their site:
+
+{% highlight js %}
+var Person = Class.create();
+Person.prototype = {
+  initialize: function(name) {
+    this.name = name;
+  },
+  say: function(message) {
+    return this.name + ': ' + message;
+  }
+};
+{% endhighlight %}
+
+
+Further to this, we've found it best not to rely on this. There are instances where it's value can change (for example inside a prototype click handler) and you are unable to access your classes methods / fields. You can fix this by using bind but it's our opinion that this leaves messy and cluttered code. We'd recommend storing a reference to your instance at the beginning of each method, since then this provides a consistent way to reference your fields.
+
+{% highlight js %}
+var Person = Class.create();
+Person.prototype = {
+    initialize: function(name) {
+        var self = this;
+        self.name = name;
+    },
+    say: function(message) {
+        var self = this;
+        return self.name + ': ' + message;
+    }
+};
+{% endhighlight %}
+
+In this way, we can ensure that we always have access to your class' methods and variables no matter where you are in your code.
+
+For further information, including inheritance, we'd recommend looking at the prototype website.
+
+
+If we were to implement all our JavaScript in the way described above we could quickly run into maintainability issues, mainly because each class we've defined will find it's way into the global namespace, which any programmer worth his salt will tell you is a bad way to do things. Instead, we could take a leaf out of Magento's book and employ a semantic folder hierarchy which allows us better control of where our classes exist. For instance:
+
+{% highlight js %}
+// Ensure our hierarchy exists
+if (!window.Meanbee) window.Meanbee = {};
+if (!window.Meanbee.Core) window.Meanbee.Core = {};
+
+(function() {
+    var Person = Class.create();
+    Person.prototype = {
+        initialize: function(name) {
+            var self = this;
+            self.name = name;
+        },
+        say: function(message) {
+            var self = this;
+            return self.name + ': ' + message;
+        }
+    };
+
+    window.Meanbee.Core.Person = Person;
+})();
+{% endhighlight %}
+
+In this way our JavaScript has a place to belong and there is less pollution of the global namespace.

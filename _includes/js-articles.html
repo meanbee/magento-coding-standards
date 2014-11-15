@@ -1,0 +1,11 @@
+<aside class="articles-listing">
+
+    <ul class="articles-listing-list">
+        {% for post in site.categories.js reversed %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+</aside>

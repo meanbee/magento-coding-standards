@@ -1,0 +1,10 @@
+@include keyframes(slideInTop) {
+  from {
+    opacity: 0;
+    @include transform(translateY(-20px));
+  }
+  to {
+    opacity: 1;
+    @include transform(translateY(0px));
+  }
+}

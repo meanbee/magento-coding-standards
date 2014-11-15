@@ -1,0 +1,10 @@
+@import "mixins/neat/neat-helpers"; // or "neat-helpers" when in Rails
+
+// Change the grid settings
+$column: 160px;
+$gutter: 20px;
+$grid-columns: 8;
+$max-width: em(960);
+
+$fg-column: $column;
+$fg-gutter: $gutter;

@@ -1,0 +1,38 @@
+---
+layout: default
+title: Magento PHP Coding Standards by Meanbee
+active: php
+---
+<div class="page-header">
+    <h1>Coding Standards for Magento</h1>
+    <div class="buttons-group">
+        <a href="/php.html" class="button-element button-outline active">PHP</a>
+        <a href="/js.html" class="button-element button-outline">JS</a>
+        <a href="/css.html" class="button-element button-outline">CSS</a>
+    </div>
+</div>
+
+<section class="blog">
+    {% include php-articles.html %}
+
+    <article class="blog-article">
+      {% for post in site.categories.php reversed %}
+        <section class="blog-article-section">
+          {% if post.isChild %}
+            <h2 class="blog-article-subtitle" id="{{ post.permalink }}">{{ post.title }}</h2>
+          {% else %}
+            <h1 class="blog-article-title" id="{{ post.permalink }}">{{ post.title }}</h1>
+          {% endif %}
+
+          {{ post.content }}
+
+          {% if post.isChild %}
+          <p>
+            <a href="#">Back to top</a>
+          </p>
+          {% endif %}
+        </section>
+      {% endfor %}
+    </article>    
+
+</section>

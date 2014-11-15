@@ -1,0 +1,11 @@
+.blog-article-section {
+
+	ul {
+		@include rem(margin, 20px 0);
+	}
+
+	li {
+		list-style: disc;
+		@include rem(margin, 0 0 0 40px);
+	}
+}

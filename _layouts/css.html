@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    <header role="banner">
+        <div class="header-inner">
+            <a href="/" class="meanbee-logo"><h1>Meanbee</h1></a>
+        </div>
+    </header>
+
+    <section class="blog">
+        {% include css-articles.html %}
+        <article class="blog-article">
+            <header>
+                <h1 class="blog-article-title"><a href="{{ page.permalink }}">{{ page.title }}</a></h1>
+            </header>
+            {{ content }}
+        </article>
+    </section>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

@@ -1,0 +1,46 @@
+.page-header {
+    @include rem(padding, 30px 20px);
+    text-align: center;
+
+    h1 {
+        font-weight: 300;
+        @include rem(font-size, 48px);
+        line-height: 1.17;
+        margin: 0 0 1rem;
+    }
+
+    .button {
+        background-color: $white;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $yellow;
+        }
+    }
+
+    .button-hollow {
+        display: inline-block;
+        line-height: 1.5;
+    }
+}
+
+.page-header-title {
+    @include rem(font-size, 30px);
+}
+
+.page-header-subtitle {
+    @include rem(font-size, 18px);
+}
+
+@include modular-bp(em(800)) {
+    .page-header {
+        @include rem(padding, 58px 20px);
+    }
+}
+
+@include modular-bp(em(1000)) {
+    .page-header .wrap {
+        padding: 0;
+    }
+}

@@ -1,0 +1,116 @@
+header[role="banner"] {
+    position: relative;
+
+    .meanbee-logo {
+        @include animation(slideInTop .75s ease-in-out);
+    }
+}
+
+.header-inner {
+    @include rem(padding, 20px);
+    @include rem(margin, 40px 0 0 0);
+
+    @include modular-bp(em(700)) {
+        @include rem(margin, 100px 0 0 0);
+    }
+}
+
+.intro,
+footer[role="contentinfo"],
+.page-header {
+    background: rgba(240, 234, 228, .4);
+    border-top: 1px solid $softLightGrey;
+    border-bottom: 1px solid $softLightGrey;
+}
+
+.footer-inner {
+    @include rem(padding, 60px 30px);
+    position: relative;
+
+    .copyright {
+        @include span-columns(3 of 9);
+        @include omega();
+        float: right;
+        text-align: right;
+    }
+}
+
+.blog {
+    @include outer-container();
+    @include rem(padding, 30px 0);
+
+    .articles-listing {
+        @include rem(padding, 20px);
+        text-align: center;
+
+        a {
+            border-bottom-color: rgba(51, 51, 51, .1);
+            color: $darkGrey;
+            font-weight: 200;
+
+            &:hover,
+            &:active,
+            &:focus {
+                border-bottom-color: rgba(51, 51, 51, .3);
+            }
+        }
+    }
+}
+
+.blog-article {
+    font-weight: 300;
+    @include rem(padding, 0 20px);
+    word-break: break-word;
+}
+
+.blog-article-section {
+    @include rem(margin, 0 0 40px 0);
+}
+
+.blog-article-title {
+    @include rem(font-size, 40px);
+    line-height: 1.25;
+    @include rem(margin, 0 0 15px 0);
+}
+
+.blog-article-subtitle {
+    @include rem(font-size, 26px);
+    line-height: 1.25;
+    @include rem(margin, 0 0 15px 0);
+}
+
+@include modular-bp(em(800)) {
+    .blog {
+        @include rem(padding, 50px 0);
+        
+        .articles-listing {
+            @include span-columns(2 of 8);
+            @include rem(padding, 0 0 0 40px);
+            text-align: left;
+
+            .child {
+                @include rem(margin, 0 0 0 15px);
+            }
+        }
+    }
+
+    .blog-article {
+        @include span-columns(6 of 8);
+        @include rem(padding, 0 20px);
+    }
+}
+
+@include modular-bp(em(1000)) {
+    .blog-article {
+        padding-left: 0;
+    }
+}
+
+    @include modular-bp(em(800)) {
+        .meanbee-logo-small {
+            display: inline-block;
+            float: left;
+            margin-right: 7%;
+            position: static;
+        }
+    }

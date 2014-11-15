@@ -1,0 +1,16 @@
+.articles-listing {
+
+}
+
+.articles-listing-title {
+    font-weight: 200;
+}
+
+.articles-listing-list {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+        @include rem(padding-bottom, 10px);
+    }
+}

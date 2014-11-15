@@ -1,0 +1,12 @@
+# Site settings
+title: Meanbee coding standards for Magento development
+description: >
+  Meanbee's coding standards that are used and code reviewed by on all of our projects.  
+baseurl: ""
+url: "http://standards.meanbee.com"
+
+# Build settings
+markdown: kramdown
+
+sass:
+    style: :compressed
