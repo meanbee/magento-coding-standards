@@ -1,24 +1,23 @@
 ---
 layout: default
-title: Magento CSS Coding Standards by Meanbee
-active: css
+title: Magento PHP Coding Standards by Meanbee
+active: php
 ---
 <div class="page-header">
     <h1>Coding Standards for Magento</h1>
     <div class="buttons-group">
         <a href="/php.html" class="button-element button-outline">PHP</a>
         <a href="/js.html" class="button-element button-outline">JS</a>
-        <a href="/css.html" class="button-element button-outline active">CSS</a>
-        <a href="/tools.html" class="button-element button-outline">Tools</a>
+        <a href="/css.html" class="button-element button-outline">CSS</a>
+        <a href="/tools.html" class="button-element button-outline active">Tools</a>
     </div>
 </div>
 
 <section class="blog">
-    
-    {% include css-articles.html %}
+    {% include tools-articles.html %}
 
     <article class="blog-article">
-      {% for post in site.categories.css reversed %}
+      {% for post in site.categories.tools reversed %}
         <section class="blog-article-section">
           {% if post.isChild %}
             <h2 class="blog-article-subtitle" id="{{ post.permalink }}">{{ post.title }}</h2>
@@ -36,6 +35,5 @@ active: css
         </section>
       {% endfor %}
     </article>    
-
 
 </section>
