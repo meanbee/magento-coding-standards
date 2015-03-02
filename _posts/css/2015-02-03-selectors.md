@@ -36,7 +36,7 @@ and so can be overwritten without increasing specificity levels.
 {% endhighlight %}
 
 ###Qualifying
-Never tag-qualify. By qualifying selectors specificity becomes a problem. Always rework you're markup and class structure to address inheritance issues 
+Never tag-qualify. By qualifying selectors specificity becomes a problem. Always rework your markup and class structure to address inheritance issues 
 instead of qualifying.
 
 {% highlight scss %}
