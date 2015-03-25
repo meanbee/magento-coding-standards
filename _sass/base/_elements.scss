@@ -192,11 +192,11 @@ iframe {
 
 pre {
     white-space: pre-wrap;
+    @include rem(margin, 10px);
 }
 
-pre, 
+pre,
 code {
     font-family: monospace, serif;
-    @include rem(font-size, 18px);
-    @include rem(margin, 10px);
+    @include rem(font-size, 15px);
 }
