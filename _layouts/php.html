@@ -22,10 +22,10 @@
     </div>
 
     <section class="blog">
-        {% include tools-articles.html %}
+        {% include php-articles.html %}
 
         <article class="blog-article">
-          {% for post in site.categories.tools reversed %}
+          {% for post in site.categories.php reversed %}
             <section class="blog-article-section">
               {% if post.isChild %}
                 <h2 class="blog-article-subtitle" id="{{ post.permalink }}">{{ post.title }}</h2>
