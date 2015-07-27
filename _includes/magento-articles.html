@@ -1,0 +1,11 @@
+<aside class="articles-listing">
+
+    <ul class="articles-listing-list">
+        {% for post in site.categories.magento reversed %}
+        <li>
+            <a href="#{{ post.url | remove_first:'/'}}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+</aside>
