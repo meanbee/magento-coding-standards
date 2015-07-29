@@ -99,7 +99,7 @@ em {
 
 
 a {
-    color: $yellow;
+    color: darken($yellow, 10%);
     border-bottom: 1px solid rgba(255, 168, 0, 0.1);
     @include transition(border-bottom-color ease .3s);
     text-decoration: none;
