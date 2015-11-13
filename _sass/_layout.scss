@@ -28,7 +28,7 @@ footer[role="contentinfo"],
     position: relative;
 
     .copyright {
-        @include span-columns(3 of 9);
+        @include span-columns(5 of 9);
         @include omega();
         float: right;
         text-align: right;
@@ -82,7 +82,7 @@ footer[role="contentinfo"],
 @include modular-bp(em(800)) {
     .blog {
         @include rem(padding, 50px 0);
-        
+
         .articles-listing {
             @include span-columns(2 of 8);
             @include rem(padding, 0 0 0 40px);
