@@ -16,7 +16,7 @@ The way that we address this problem is to commit the original code once copied 
 
 Following this, you can then make the necessary modifications and commit. This process makes it much easier to understand what has changed by viewing the git history of this file.
 
-The tool [DAC](https://github.com/shawesome/dac) speeds up the process of copying a template from the base theme to your custom theme and committing the initial version.
+The tool [DAC](https://github.com/shawesome/dac) speeds up the process of copying a template from the base theme to your custom theme and committing the initial version. There's also a handy [magerun plugin](https://github.com/meanbee/magerun-dac) to get this functionality.
 
 There are two further steps that are recommended in making your modifications as transparent as possible:
 
